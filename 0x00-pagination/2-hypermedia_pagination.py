@@ -47,7 +47,7 @@ class Server:
         result = self.dataset()
         return result[res[0]:res[1]]
 
-    def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict[str, int]:
+    def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict:
         """Return dictionary"""
         result = self.get_page(page, page_size)
         dataset = self.dataset()
@@ -60,9 +60,6 @@ class Server:
 
         if(total_pages < nexts):
             nexts = None
-        
-        if(len(result) == 0):
-            page_size = 0
 
         return {
             "page_size": page_size,
