@@ -60,6 +60,9 @@ class Server:
 
         if(total_pages < nexts):
             nexts = None
+        
+        if(len(result) == 0):
+            page_size = 0
 
         return {
             "page_size": page_size,
