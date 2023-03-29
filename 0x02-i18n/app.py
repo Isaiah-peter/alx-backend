@@ -100,7 +100,7 @@ def hello_world():
         Return:
             Initial template html
     """
-    return render_template('6-index.html')
+    return render_template('index.html')
 
 
 if __name__ == "__main__":
